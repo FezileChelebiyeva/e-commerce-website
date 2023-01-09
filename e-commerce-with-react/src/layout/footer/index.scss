@@ -11,22 +11,28 @@
       .top {
         display: flex;
         justify-content: space-between;
+        width: 100%;
         color: white;
         padding: 60px 0;
         border-bottom: 1px solid #5e5d5d;
         .contact {
           .title {
-            width: 65%;
+            width: 320px;
             color: #a7a7a7;
             margin-bottom: 20px;
             line-height: 22px;
             font-size: 14px;
+            font-style: italic;
           }
-          p {
+          div{
             margin-bottom: 20px;
+            p {
             font-size: 14px;
             font-weight: 600;
+            margin-top: 8px;
           }
+          }
+          
           .icons {
             display: flex;
             .fa-brands {
@@ -60,10 +66,10 @@
           }
         }
         .form {
-          margin-left: 130px;
+          // margin-left: 130px;
           form {
             p {
-              width: 73%;
+              width: 330px;
               color: #a7a7a7;
               margin-bottom: 20px;
               line-height: 22px;

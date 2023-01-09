@@ -44,7 +44,7 @@ const Header = () => {
 
                   <li>
                     <i className="fa-solid fa-user"></i>
-                    <Link>Sign In</Link>
+                    <Link>Sign In </Link>
                     Or
                     <Link> Register</Link>
                   </li>
@@ -97,6 +97,11 @@ const Header = () => {
                 <div className="navbar">
                   <nav>
                     <ul className="list-link">
+                      <li className="list">
+                        <Link to={"/"} className="link">
+                          Home
+                        </Link>
+                      </li>
                       <li className="list">
                         <Link
                           className="link"

@@ -1,0 +1,40 @@
+[
+  {
+    "dealsOfWeek": [
+      {
+        "id": 0,
+        "title": "",
+        "image": "",
+        "price": 0,
+        "discountPrice": 0,
+        "name": ""
+      },
+      {
+        "id": 1,
+        "title": "",
+        "image": "",
+        "price": 0,
+        "discountPrice": 0,
+        "name": ""
+      }
+    ],
+    "bestSellers": [
+      {
+        "id": 0,
+        "title": "",
+        "image": "",
+        "price": 0,
+        "discountPrice": 0,
+        "name": ""
+      },
+      {
+        "id": 1,
+        "title": "",
+        "image": "",
+        "price": 0,
+        "discountPrice": 0,
+        "name": ""
+      }
+    ]
+  }
+]

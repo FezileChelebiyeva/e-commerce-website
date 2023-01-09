@@ -11,21 +11,21 @@ const Footer = () => {
             <div className="contact">
               <h3>CONTACT</h3>
               <p className="title">
-                <em>
+                
                   We are a team of designers and developers that create high
                   quality Wordpress, Magento, Prestashop, Opencart.drd
-                </em>
+               
               </p>
-              <p>
-                <h5>Contactdtyh</h5>
+              <div>
+                <p>Contactdtyh</p>
                 <p>169-C, Technohub, Dubai Silicon Oasis.</p>
-              </p>
+              </div>
               <div className="icons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-google-plus-g"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i className="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-google-plus-g"></i>
+                <i className="fa-brands fa-linkedin-in"></i>
               </div>
             </div>
             <div className="nav">
