@@ -7,6 +7,7 @@ import logo4 from "../../assets/images/designers.webp";
 import { Carousel } from "antd";
 import "./index.scss";
 import { Helmet } from "react-helmet";
+import CardDealsOfWeek from "../../components/card-deals-of-week";
 
 const HomePage = () => {
   const [image, setImage] = useState(true);
@@ -87,7 +88,6 @@ const HomePage = () => {
               </div>
             </Carousel>
           </div>
-
           <div className="images">
             <div className="image1">
               <div className="img"></div>
@@ -99,6 +99,8 @@ const HomePage = () => {
               <div className="img"></div>
             </div>
           </div>
+
+          <CardDealsOfWeek />
 
           <div className="images-middle">
             <div className="image1">

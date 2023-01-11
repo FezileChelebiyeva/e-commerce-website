@@ -29,7 +29,7 @@ const Header = () => {
     setShowPages(false);
   };
   const handleHeader = (e) => {
-    window.scrollY > 230 ? setHeader(false) : setHeader(true)
+    window.scrollY > 230 ? setHeader(false) : setHeader(true);
   };
   window.addEventListener("scroll", handleHeader);
   return (
@@ -127,9 +127,7 @@ const Header = () => {
                               </li>
 
                               <li className="sub-menu-li">
-                                <Link href="/products/4-soldout-product">
-                                  Soldout product
-                                </Link>
+                                <Link>Soldout product</Link>
                               </li>
 
                               <li className="sub-menu-li">
@@ -205,15 +203,11 @@ const Header = () => {
                                   </li>
 
                                   <li>
-                                    <Link href="/products/7-sample-affiliate-product">
-                                      Sample affiliate product
-                                    </Link>
+                                    <Link>Sample affiliate product</Link>
                                   </li>
 
                                   <li>
-                                    <Link href="/products/8-countdown-product">
-                                      Countdown product
-                                    </Link>
+                                    <Link>Countdown product</Link>
                                   </li>
 
                                   <li>
@@ -228,9 +222,7 @@ const Header = () => {
                                 </Link>
                                 <ul>
                                   <li>
-                                    <Link href="/products/5-simple-product">
-                                      Simple product
-                                    </Link>
+                                    <Link>Simple product</Link>
                                   </li>
 
                                   <li>
@@ -268,7 +260,7 @@ const Header = () => {
                               className="lebel-menu "
                             >
                               <li className="sub-menu-li">
-                                <Link href="/about-us">About Us</Link>
+                                <Link>About Us</Link>
                               </li>
 
                               <li className="sub-menu-li">
@@ -276,11 +268,11 @@ const Header = () => {
                               </li>
 
                               <li className="sub-menu-li">
-                                <Link href="/pages/faq">FAQ</Link>
+                                <Link>FAQ</Link>
                               </li>
 
                               <li className="sub-menu-li">
-                                <Link href="/404">404</Link>
+                                <Link>404</Link>
                               </li>
 
                               <li className="sub-menu-li">
@@ -292,7 +284,7 @@ const Header = () => {
                               </li>
 
                               <li className="sub-menu-li">
-                                <Link href="/account">My Account</Link>
+                                <Link>My Account</Link>
                               </li>
 
                               <li className="sub-menu-li">
@@ -362,9 +354,7 @@ const Header = () => {
                             </li>
 
                             <li className="sub-menu-li">
-                              <Link href="/products/4-soldout-product">
-                                Soldout product
-                              </Link>
+                              <Link>Soldout product</Link>
                             </li>
 
                             <li className="sub-menu-li">
@@ -436,15 +426,11 @@ const Header = () => {
                                 </li>
 
                                 <li>
-                                  <Link href="/products/7-sample-affiliate-product">
-                                    Sample affiliate product
-                                  </Link>
+                                  <Link>Sample affiliate product</Link>
                                 </li>
 
                                 <li>
-                                  <Link href="/products/8-countdown-product">
-                                    Countdown product
-                                  </Link>
+                                  <Link>Countdown product</Link>
                                 </li>
 
                                 <li>
@@ -457,9 +443,7 @@ const Header = () => {
                               <Link className="collection">Collection - 3</Link>
                               <ul>
                                 <li>
-                                  <Link href="/products/5-simple-product">
-                                    Simple product
-                                  </Link>
+                                  <Link>Simple product</Link>
                                 </li>
 
                                 <li>
@@ -505,11 +489,11 @@ const Header = () => {
                             </li>
 
                             <li className="sub-menu-li">
-                              <Link href="/pages/faq">FAQ</Link>
+                              <Link>FAQ</Link>
                             </li>
 
                             <li className="sub-menu-li">
-                              <Link href="/404">404</Link>
+                              <Link>404</Link>
                             </li>
 
                             <li className="sub-menu-li">
@@ -521,7 +505,7 @@ const Header = () => {
                             </li>
 
                             <li className="sub-menu-li">
-                              <Link href="/account">My Account</Link>
+                              <Link>My Account</Link>
                             </li>
 
                             <li className="sub-menu-li">

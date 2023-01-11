@@ -1,0 +1,83 @@
+#deals-of-week-cards {
+  h1 {
+    font-size: 18px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    color: #1a1f2b;
+    position: relative;
+    &::after {
+      background: #56a700;
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .cards {
+    display: flex;
+    border: 1px solid #ececec;
+    padding: 30px 0;
+
+    .card {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 40px;
+      .img {
+        img {
+          width: 250px;
+        }
+      }
+      .info {
+        a {
+          text-decoration: none;
+          color: #1a1f2b;
+          font-size: 15px;
+          font-weight: 600;
+          transition: 0.4s;
+        }
+        .price-product {
+          padding-top: 20px;
+          .price {
+            color: rgb(158, 157, 157);
+            text-decoration: line-through;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 10px;
+          }
+          .discountPrice {
+            font-weight: 700;
+            font-size: 14px;
+            color: #c61132;
+          }
+        }
+        .title {
+          color: #555;
+          font-size: 14px;
+          width: 100%;
+          padding: 20px 0;
+        }
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .square {
+            background-color: #56a700;
+            border-radius: 3px;
+            max-width: unset;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 14px;
+            height: 55px;
+            padding-top: 10px;
+            width: 55px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
