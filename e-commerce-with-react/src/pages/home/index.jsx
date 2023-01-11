@@ -4,8 +4,9 @@ import logo1 from "../../assets/images/oceandor.webp";
 import logo2 from "../../assets/images/retroge.webp";
 import logo3 from "../../assets/images/photograph.png";
 import logo4 from "../../assets/images/designers.webp";
+import { Carousel } from "antd";
 import "./index.scss";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   const [image, setImage] = useState(true);
@@ -16,43 +17,77 @@ const HomePage = () => {
   const handeImageDog = () => {
     setImage(false);
   };
+
   return (
     <div id="home-page">
-      {/* <Helmet>
+      <Helmet>
         <title>Tammy demo</title>
         <meta name="description" content="test on react-helmet" />
         <meta name="theme-color" content="#ccc" />
-      </Helmet> */}
+      </Helmet>
       <div className="container">
         <div className="home">
           <div className="slider">
-            <div className={image ? "dog-image" : "cat-image"}>
-              <div className="head">
-                {image ? (
-                  <h1>
-                    NOT JUST <br /> YOUR AVERAGE <br /> PET BOWL
-                  </h1>
-                ) : (
-                  <h1>
-                    CAT BOWLS & <br /> CAT FOUNTAINS <br />
-                    <p>Shop Online For Cat feeding and & Watering Supplies</p>
-                  </h1>
-                )}
+            <Carousel autoplay autoplaySpeed="200">
+              <div
+                className={`"dog-image" ${image ? "dog-image" : "cat-image"}`}
+              >
+                <div className="head">
+                  {image ? (
+                    <h1>
+                      NOT JUST <br /> YOUR AVERAGE <br /> PET BOWL
+                    </h1>
+                  ) : (
+                    <h1>
+                      CAT BOWLS & <br /> CAT FOUNTAINS <br />
+                      <p>Shop Online For Cat feeding and & Watering Supplies</p>
+                    </h1>
+                  )}
 
-                <button>SHOP NOW</button>
+                  <button>SHOP NOW</button>
+                </div>
+                <div className="btn-slider">
+                  <button
+                    className={image ? "active" : null}
+                    onClick={() => handeImageCat()}
+                  ></button>{" "}
+                  <button
+                    className={image ? null : "active"}
+                    onClick={() => handeImageDog()}
+                  ></button>
+                </div>
               </div>
-              <div className="btn-slider">
-                <button
-                  className={image ? "active" : null}
-                  onClick={() => handeImageCat()}
-                ></button>{" "}
-                <button
-                  className={image ? null : "active"}
-                  onClick={() => handeImageDog()}
-                ></button>
+              <div
+                className={`"cat-image" ${image ? "cat-image" : "dog-image"}`}
+              >
+                <div className="head">
+                  {image ? (
+                    <h1>
+                      NOT JUST <br /> YOUR AVERAGE <br /> PET BOWL
+                    </h1>
+                  ) : (
+                    <h1>
+                      CAT BOWLS & <br /> CAT FOUNTAINS <br />
+                      <p>Shop Online For Cat feeding and & Watering Supplies</p>
+                    </h1>
+                  )}
+
+                  <button>SHOP NOW</button>
+                </div>
+                <div className="btn-slider">
+                  <button
+                    className={image ? "active" : null}
+                    onClick={() => handeImageCat()}
+                  ></button>{" "}
+                  <button
+                    className={image ? null : "active"}
+                    onClick={() => handeImageDog()}
+                  ></button>
+                </div>
               </div>
-            </div>
+            </Carousel>
           </div>
+
           <div className="images">
             <div className="image1">
               <div className="img"></div>
