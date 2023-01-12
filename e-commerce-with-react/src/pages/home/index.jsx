@@ -8,6 +8,7 @@ import { Carousel } from "antd";
 import "./index.scss";
 import { Helmet } from "react-helmet";
 import CardDealsOfWeek from "../../components/card-deals-of-week";
+import CardBestSellersCatagory from "../../components/card-bestSellers-Catagory";
 
 const HomePage = () => {
   const [image, setImage] = useState(true);
@@ -102,6 +103,8 @@ const HomePage = () => {
 
           <CardDealsOfWeek />
 
+          <CardBestSellersCatagory />
+          
           <div className="images-middle">
             <div className="image1">
               <div className="img"></div>

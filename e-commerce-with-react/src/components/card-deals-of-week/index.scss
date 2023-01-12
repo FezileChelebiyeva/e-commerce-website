@@ -1,4 +1,16 @@
 #deals-of-week-cards {
+  .swiper-button-prev{
+    --swiper-navigation-size: 24px;
+    --swiper-navigation-color: black;
+    height: 20px;
+    cursor: pointer;
+}
+.swiper-button-next{
+    --swiper-navigation-color: black;
+    --swiper-navigation-size: 24px;
+    height: 20px;
+    cursor: pointer;
+}
   h1 {
     font-size: 18px;
     padding-bottom: 15px;
@@ -38,6 +50,9 @@
           font-size: 15px;
           font-weight: 600;
           transition: 0.4s;
+          &:hover{
+            color: #56a700;
+        }
         }
         .price-product {
           padding-top: 20px;

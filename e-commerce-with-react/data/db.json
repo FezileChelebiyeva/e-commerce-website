@@ -31,7 +31,7 @@
         "id": 4,
         "title": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
         "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-11_7c1b0a24-7b0a-45ee-9c0a-0422e9092338_large.jpg?v=1556013706",
-        "price":" 60.00",
+        "price": " 60.00",
         "discountPrice": "39.00",
         "name": "8. Countdown product",
         "sku": 3010
@@ -41,18 +41,81 @@
       {
         "id": 0,
         "title": "",
-        "image": "",
-        "price": 0,
-        "discountPrice": 0,
-        "name": ""
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-6_89dffb2f-9343-436d-896a-40fb00b43a88_230x_crop_center.jpg?v=1556013527",
+        "price": "85.00",
+        "discountPrice": "70.00",
+        "name": "3. Variable product"
       },
       {
         "id": 1,
         "title": "",
-        "image": "",
-        "price": 0,
-        "discountPrice": 0,
-        "name": ""
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-1_230x_crop_center.jpg?v=1556013256",
+        "price": "130.00",
+        "discountPrice": "110.00",
+        "name": "1. New and sale badge product"
+      },
+      {
+        "id": 2,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-7_3f30c1ac-d08c-4f4d-bdd7-1b93549db772_230x_crop_center.jpg?v=1642926520",
+        "price": "29.00",
+        "discountPrice": "19.00",
+        "name": "Preorder Product"
+      },
+
+      {
+        "id": 3,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-6_b12651fa-e570-4091-9bec-b732f2f4cb3c_230x_crop_center.jpg?v=1556083783",
+        "price": "79.00",
+        "name": "Product dummy title"
+      },
+      {
+        "id": 4,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-10_9816d83f-5594-4f55-b235-7a8f0ea6f8ba_230x_crop_center.jpg?v=1556083870",
+        "price": "60.00",
+        "discountPrice": "39.00",
+        "name": "Z Deal Product 1"
+      },
+      {
+        "id": 5,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-5_117aee2e-68f1-4cee-be12-1e462e2823d8_230x_crop_center.jpg?v=1556083768",
+        "price": "75.00",
+        "discountPrice": "55.00",
+        "name": "Product dummy title"
+      },
+      {
+        "id": 6,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-9_cae893d3-4035-4cb3-9dfc-c62fb7d74fff_230x_crop_center.jpg?v=1556083849",
+        "price": "50.00",
+        "name": "Z Deal Product 2"
+      },
+      {
+        "id": 7,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-8_17182a83-ddce-47fa-8ab5-7ad4a16bc82b_230x_crop_center.jpg?v=1556083825",
+        "price": "85.00",
+        "discountPrice": "70.00",
+        "name": "Z Deal Product 3"
+      },
+      {
+        "id": 8,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-7_5a86e643-b20a-4599-980f-db4d9abb0e7e_230x_crop_center.jpg?v=1556083801",
+        "price": "21.00",
+        "discountPrice": "19.00",
+        "name": "Product title here"
+      },
+      {
+        "id": 9,
+        "title": "",
+        "image": "https://cdn.shopify.com/s/files/1/0067/1845/5893/products/product-3_f6ebcba4-6715-4abe-974f-173d5052cf1e_230x_crop_center.jpg?v=1556013446",
+        "price": "21.00",
+        "discountPrice": "19.00",
+        "name": "Product with video"
       }
     ]
   }

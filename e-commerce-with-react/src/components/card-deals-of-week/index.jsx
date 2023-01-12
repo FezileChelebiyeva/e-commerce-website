@@ -4,6 +4,9 @@ import { fetchData } from "../../redux/slice/detDataSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./index.scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import { Navigation, EffectFade } from "swiper";
 import { Link } from "react-router-dom";
 const CardDealsOfWeek = () => {
   const dispatch = useDispatch();
@@ -17,10 +20,13 @@ const CardDealsOfWeek = () => {
       <h1>DEALS OF THE WEEK</h1>
       <div className="cards">
         <Swiper
+          modules={[Navigation, EffectFade]}
           spaceBetween={455}
           slidesPerView={3}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          speed={500}
+          navigation
         >
           {products.data.dealsOfWeek?.map((element) => {
             return (
