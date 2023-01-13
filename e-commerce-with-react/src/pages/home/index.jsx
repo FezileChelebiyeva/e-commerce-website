@@ -9,6 +9,11 @@ import "./index.scss";
 import { Helmet } from "react-helmet";
 import CardDealsOfWeek from "../../components/card-deals-of-week";
 import CardBestSellersCatagory from "../../components/card-bestSellers-Catagory";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
+import { Navigation, EffectFade } from "swiper";
 
 const HomePage = () => {
   const [image, setImage] = useState(true);
@@ -104,7 +109,7 @@ const HomePage = () => {
           <CardDealsOfWeek />
 
           <CardBestSellersCatagory />
-          
+
           <div className="images-middle">
             <div className="image1">
               <div className="img"></div>
@@ -124,22 +129,48 @@ const HomePage = () => {
             </div>
           </div>
           <div className="logos">
-            <div className="logo">
-              <img src={logo} alt="" />
+
+          <Swiper
+            modules={[Navigation, EffectFade]}
+            spaceBetween={50}
+            slidesPerView={5}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+            speed={500}
+            navigation
+          >
+              <SwiperSlide>
+                <div className="logo">
+                  <img src={logo1} alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="logo">
+                  <img src={logo} alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="logo">
+                  <img src={logo1} alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="logo">
+                  <img src={logo2} alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="logo">
+                  <img src={logo3} alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="logo">
+                  <img src={logo4} alt="" />
+                </div>
+              </SwiperSlide>
+          </Swiper>
             </div>
-            <div className="logo">
-              <img src={logo1} alt="" />
-            </div>
-            <div className="logo">
-              <img src={logo2} alt="" />
-            </div>
-            <div className="logo">
-              <img src={logo3} alt="" />
-            </div>
-            <div className="logo">
-              <img src={logo4} alt="" />
-            </div>
-          </div>
         </div>
       </div>
     </div>

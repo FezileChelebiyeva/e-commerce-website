@@ -21,8 +21,8 @@ const CardDealsOfWeek = () => {
       <div className="cards">
         <Swiper
           modules={[Navigation, EffectFade]}
-          spaceBetween={455}
-          slidesPerView={3}
+          spaceBetween={50}
+          slidesPerView={2}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           speed={500}

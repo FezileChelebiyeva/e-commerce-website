@@ -256,19 +256,32 @@
           }
         }
       }
-      .logos{
+      .swiper-button-prev {
+        --swiper-navigation-size: 24px;
+        --swiper-navigation-color: black;
+        height: 20px;
+        cursor: pointer;
+      }
+      .swiper-button-next {
+        --swiper-navigation-color: black;
+        --swiper-navigation-size: 24px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .logos {
         display: flex;
         justify-content: space-between;
         align-items: center;
         border: 1px solid #ececec;
-        padding: 30px 60px;
-        .logo{
-          img{
+        padding: 50px 20px;
+        .logo {
+          padding: 0 20px;
+          img {
             width: 100%;
             transition: all 0.4s;
             cursor: pointer;
-            &:hover{
-              transform: scale(1.07);
+            &:hover {
+              transform: scale(1.09);
             }
           }
         }
