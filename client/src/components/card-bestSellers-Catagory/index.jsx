@@ -52,6 +52,8 @@ const CardBestSellersCatagory = () => {
               modules={[Navigation, EffectFade]}
               spaceBetween={50}
               slidesPerView={3}
+              slidesPerColumn={3}
+              slidesPerGroup={3}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
               speed={500}
@@ -79,6 +81,13 @@ const CardBestSellersCatagory = () => {
                             {element.discountPrice}
                           </span>
                         </p>
+                        <div className="icons">
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                          <i className="fa-solid fa-star"></i>
+                        </div>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -117,6 +126,8 @@ const CardBestSellersCatagory = () => {
                     modules={[Navigation, EffectFade]}
                     spaceBetween={50}
                     slidesPerView={4}
+                    slidesPerColumn={4}
+                    slidesPerGroup={4}
                     onSlideChange={() => console.log("slide change")}
                     onSwiper={(swiper) => console.log(swiper)}
                     speed={500}
@@ -160,6 +171,8 @@ const CardBestSellersCatagory = () => {
                     modules={[Navigation, EffectFade]}
                     spaceBetween={50}
                     slidesPerView={4}
+                    slidesPerColumn={4}
+                    slidesPerGroup={4}
                     onSlideChange={() => console.log("slide change")}
                     onSwiper={(swiper) => console.log(swiper)}
                     speed={500}
@@ -203,6 +216,8 @@ const CardBestSellersCatagory = () => {
                     modules={[Navigation, EffectFade]}
                     spaceBetween={50}
                     slidesPerView={4}
+                    slidesPerColumn={4}
+                    slidesPerGroup={4}
                     onSlideChange={() => console.log("slide change")}
                     onSwiper={(swiper) => console.log(swiper)}
                     speed={500}

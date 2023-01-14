@@ -3,13 +3,14 @@
     .home {
       padding: 30px 0;
       .slider {
+        background-color: rgb(43, 49, 65);
         .dog-image {
           width: 1220px;
           height: 500px;
           background-image: url("../../assets/images/slider-dog.webp");
 
           .head {
-            padding: 90px 70px;
+            padding: 95px 70px;
             h1 {
               font-size: 40px;
               color: white;

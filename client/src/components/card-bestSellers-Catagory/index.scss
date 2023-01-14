@@ -28,6 +28,8 @@
         font-weight: 600;
         padding: 15px 10px;
         text-align: center;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
       }
       .btns {
         button {
@@ -59,7 +61,7 @@
           column-gap: 20px;
           .img {
             img {
-              width: 80px;
+              width: 100px;
             }
           }
           .info {
@@ -85,6 +87,12 @@
                 font-weight: 700;
                 font-size: 14px;
                 color: #c61132;
+              }
+            }
+            .icons {
+              margin-top: 12px;
+              .fa-solid {
+                color: #f5c60d;
               }
             }
           }
