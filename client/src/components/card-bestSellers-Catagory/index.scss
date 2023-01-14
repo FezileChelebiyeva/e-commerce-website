@@ -101,11 +101,11 @@
       #category {
         .category {
           border: 1px solid #ececec;
-          padding: 30px 20px;
+          padding: 30px 0;
           .card-category {
             padding: 20px 40px;
-            border: 1px solid #ececec;
-            border-radius: 5px;
+            border-left: 1px solid #ececec;
+            cursor: pointer;
             .img {
               img {
                 width: 200px;
@@ -135,6 +135,32 @@
                   font-weight: 700;
                   font-size: 14px;
                   color: #c61132;
+                }
+              }
+            }
+            .btn {
+              margin-top: 20px;
+              display: flex;
+              justify-content: center;
+              button {
+                background: transparent;
+                border: 2px solid #ececec;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 150px;
+                font-size: 14px;
+                border-radius: 500px;
+                font-weight: 400;
+                text-align: center;
+                transition: all 0.4s;
+                outline: 0;
+                cursor: pointer;
+                &:hover {
+                  background-color: #56a700;
+                  color: #fff;
+                  border: 0;
                 }
               }
             }

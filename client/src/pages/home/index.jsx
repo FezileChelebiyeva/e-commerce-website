@@ -40,8 +40,8 @@ const HomePage = () => {
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
               speed={500}
             >
               <SwiperSlide>
@@ -154,8 +154,8 @@ const HomePage = () => {
               modules={[Navigation, EffectFade]}
               spaceBetween={50}
               slidesPerView={5}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
               speed={500}
               navigation
             >

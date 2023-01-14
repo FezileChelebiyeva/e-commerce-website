@@ -8,10 +8,11 @@ const initialState = {
 
 export const fetchData = createAsyncThunk("fetchData", async () => {
   const response = await axios.get("http://localhost:8000/products");
+  console.log(response.data);
   return response.data;
 });
 
-export const counterSlice = createSlice({
+export const getData = createSlice({
   name: "products",
   initialState,
   reducers: {},
@@ -31,4 +32,4 @@ export const counterSlice = createSlice({
 });
 
 // export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-export default counterSlice.reducer;
+export default getData.reducer;

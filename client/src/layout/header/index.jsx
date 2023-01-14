@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import logo from "../../assets/images/logo-tammy_245x.avif";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -9,6 +10,9 @@ const Header = () => {
   const [showPages, setShowPages] = useState(false);
   const [header, setHeader] = useState(true);
 
+  const count = useSelector((state) => state.cards.count);
+  const price = useSelector((state) => state.cards.price);
+  const dispatch = useDispatch();
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -82,13 +86,13 @@ const Header = () => {
                 <div className="cart-widget">
                   <div className="cart-icon">
                     <i className="fa-sharp fa-solid fa-bag-shopping"></i>
-                    <span className="cart-count">0</span>
+                    <span className="cart-count">{count}</span>
                   </div>
                   <div className="cart-text">
                     <span className="d-block">Your cart</span>
                     <span className="amount">
                       <span className="shopping-cart__total">
-                        <span className="money">$0.00</span>
+                        <span className="money">${price}</span>
                       </span>
                     </span>
                   </div>

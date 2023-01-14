@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "../../redux/slice/detDataSlice";
+import { fetchData } from "../../redux/slice/getDataSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./index.scss";
@@ -23,8 +23,8 @@ const CardDealsOfWeek = () => {
           modules={[Navigation, EffectFade]}
           spaceBetween={50}
           slidesPerView={2}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
           speed={500}
           navigation
         >

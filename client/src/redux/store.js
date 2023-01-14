@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import detDataSlice from "./slice/detDataSlice";
+import getDataSlice from "./slice/getDataSlice";
+import addCardSlice from "./slice/cardSlice";
 
 export const store = configureStore({
   reducer: {
-    products: detDataSlice,
+    products: getDataSlice,
+    cards: addCardSlice
   },
 });

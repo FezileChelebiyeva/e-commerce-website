@@ -48,6 +48,7 @@
           }
         }
         .info {
+          transition: all 0.4s;
           a {
             text-decoration: none;
             color: #1a1f2b;
@@ -80,6 +81,7 @@
           }
           .btn {
             margin-top: 20px;
+            transition: all 0.4s;
             button {
               background: transparent;
               border: 2px solid #ececec;
@@ -92,6 +94,7 @@
               border-radius: 500px;
               font-weight: 400;
               text-align: center;
+            transition: all 0.4s;
               outline: 0;
                 cursor: pointer;
                 &:hover{

@@ -6,14 +6,20 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import { Navigation, EffectFade } from "swiper";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "../../redux/slice/detDataSlice";
-import { Link } from "react-router-dom";
+import { fetchData } from "../../redux/slice/getDataSlice";
+import { Link, useNavigate } from "react-router-dom";
+import { addProduct, decrementPrice, increment, incrementPrice } from "../../redux/slice/cardSlice";
 const CardUsersInterested = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
+  const card = useSelector((state) => state.cards);
   useEffect(() => {
     dispatch(fetchData());
   }, []);
+  const navigate = useNavigate();
+  const handeAddCard = (product) => {
+    dispatch(addProduct(product));
+  };
   return (
     <div id="users-interested">
       <div className="users-interested">
@@ -26,10 +32,9 @@ const CardUsersInterested = () => {
               modules={[Navigation, EffectFade]}
               spaceBetween={50}
               slidesPerView={3}
-              slidesPerColumn={1}
               slidesPerGroup={1}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
               speed={500}
               navigation
             >
@@ -63,7 +68,21 @@ const CardUsersInterested = () => {
                           <i className="fa-solid fa-star"></i>
                         </div>
                         <div className="btn">
-                            <button>Add to card</button>
+                          <button
+                            // disabled={
+                            //   card.product.find((el) => el.id === element.id)
+                            //     ? true
+                            //     : false
+                            // }
+                            onClick={() => {
+                              handeAddCard(element);
+                              navigate("/cards");
+                              dispatch(increment());
+                              dispatch(incrementPrice(element.price));
+                            }}
+                          >
+                            Add to card
+                          </button>
                         </div>
                       </div>
                     </div>

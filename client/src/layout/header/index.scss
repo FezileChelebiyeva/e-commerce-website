@@ -143,7 +143,7 @@
                     padding: 15px 45px 20px 20px;
                     box-shadow: 0 0 9px 1px #00000012;
                     position: absolute;
-                    z-index: 1;
+                    z-index: 333;
                     background-color: white;
                     li {
                       padding: 10px 0;
@@ -166,7 +166,7 @@
                     display: flex;
                     justify-content: space-between;
                     position: absolute;
-                    z-index: 1;
+                    z-index: 333;
                     background-color: white;
                     li {
                       .collection {

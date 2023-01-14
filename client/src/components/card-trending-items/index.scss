@@ -38,6 +38,7 @@
         height: 100%;
         padding: 50px 20px;
         border-left: 1px solid #ececec;
+        cursor: pointer;
         .img {
           img {
             width: 230px;
@@ -74,6 +75,32 @@
             font-size: 14px;
             width: 100%;
             padding: 20px 0;
+          }
+        }
+        .btn {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          button {
+            background: transparent;
+            border: 2px solid #ececec;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 150px;
+            font-size: 14px;
+            border-radius: 500px;
+            font-weight: 400;
+            text-align: center;
+            transition: all 0.4s;
+            outline: 0;
+              cursor: pointer;
+              &:hover{
+                  background-color: #56a700;
+                  color: #fff;
+                  border: 0;
+              }
           }
         }
       }
