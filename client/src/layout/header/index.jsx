@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import "./index.scss";
 import logo from "../../assets/images/logo-tammy_245x.avif";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [showShop, setShowShop] = useState(false);
   const [showPages, setShowPages] = useState(false);
   const [header, setHeader] = useState(true);
-
+  const [search, setSearch] = useState(false);
+  const [card, setCard] = useState(false);
+  const products = useSelector((state) => state.products);
+  const cards = useSelector((state) => state.cards);
   const count = useSelector((state) => state.cards.count);
   const price = useSelector((state) => state.cards.price);
-  const dispatch = useDispatch();
+  const [filtredProducts, setFiltredProducts] = useState(
+    products.data.allProducts
+  );
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -36,6 +42,20 @@ const Header = () => {
     window.scrollY > 230 ? setHeader(false) : setHeader(true);
   };
   window.addEventListener("scroll", handleHeader);
+
+  const handleSearch = (e) => {
+    e.target.value ? setSearch(true) : setSearch(false);
+    setFiltredProducts(
+      products.data.allProducts.filter((elem) =>
+        elem.name
+          .toLocaleLowerCase()
+          .includes(e.target.value.toLocaleLowerCase())
+      )
+    );
+  };
+  const handleShowAddedCard = () => {
+    setCard(!card);
+  };
   return (
     <div id="header">
       <header>
@@ -76,25 +96,97 @@ const Header = () => {
                 </div>
                 <div className="input-control">
                   <form action="">
-                    <input type="text" placeholder="Search our store" />
-                    <button onAbort={() => console.log("hjkl")}>
+                    <div className="search-input">
+                      <input
+                        onChange={(e) => handleSearch(e)}
+                        type="text"
+                        placeholder="Search our store"
+                      />
+                      {search && (
+                        <div id="products">
+                          <div className="product">
+                            <ul>
+                              {filtredProducts?.map((element) => {
+                                return (
+                                  <li key={element.id}>
+                                    <div className="img">
+                                      <img src={element.image} alt="" />
+                                    </div>
+                                    <div className="name">
+                                      <Link>{element.name}</Link>
+                                    </div>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <button>
                       {" "}
                       <i className="fas fa-search"></i>
                     </button>
                   </form>
                 </div>
                 <div className="cart-widget">
-                  <div className="cart-icon">
-                    <i className="fa-sharp fa-solid fa-bag-shopping"></i>
-                    <span className="cart-count">{count}</span>
-                  </div>
-                  <div className="cart-text">
-                    <span className="d-block">Your cart</span>
-                    <span className="amount">
-                      <span className="shopping-cart__total">
-                        <span className="money">${price}</span>
+                  <div onClick={() => handleShowAddedCard()} className="widget">
+                    <div className="cart-icon">
+                      <i className="fa-sharp fa-solid fa-bag-shopping"></i>
+                      <span className="cart-count">{count}</span>
+                    </div>
+                    <div className="cart-text">
+                      <span className="d-block">Your cart</span>
+                      <span className="amount">
+                        <span className="shopping-cart__total">
+                          <span className="money">${price}</span>
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                  </div>
+                  <div id="cards">
+                    <ul>
+                      {card && (
+                        <div className="card">
+                          <h3>Your cart is currently empty.</h3>
+                          {JSON.parse(localStorage.getItem("Products"))?.map(
+                            (element) => {
+                              return (
+                                <div key={element.id} className="list">
+                                  <li>
+                                    <div className="img">
+                                      <img src={element.image} alt="" />
+                                    </div>
+                                    <div className="info">
+                                      <div className="name">
+                                        <Link>{element.name}</Link>
+                                      </div>
+                                      <div className="price">
+                                        {element.quantity} x ${element.price}
+                                      </div>
+                                    </div>
+                                  </li>
+                                </div>
+                              );
+                            }
+                          )}
+                          <div className="total">
+                            <div>Total</div>
+                            <div>${price}</div>
+                          </div>
+                          <div className="btn">
+                            <button
+                              onClick={() => {
+                                navigate("/cards");
+                                setCard(false);
+                              }}
+                            >
+                              View Card
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </ul>
                   </div>
                 </div>
               </div>

@@ -13,11 +13,15 @@ export const addCard = createSlice({
       state.product?.push(action.payload);
     },
     removeProduct: (state, action) => {
-      state.product.filter((elem) => elem.id != action.payload);
+      state.product = JSON.parse(localStorage.getItem("Products"))?.filter(
+        (elem) => elem.id !== action.payload?.id
+      );
+      console.log(state.product);
     },
     removeAllProduct: (state, action) => {
-      state.product = [];
+      localStorage.removeItem(action.payload);
       state.count = 0;
+      state.price = 0;
     },
     increment: (state, action) => {
       state.count += 1;
@@ -41,6 +45,6 @@ export const {
   decremennt,
   removeAllProduct,
   incrementPrice,
-  decrementPrice
+  decrementPrice,
 } = addCard.actions;
 export default addCard.reducer;

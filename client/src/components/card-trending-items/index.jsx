@@ -7,18 +7,31 @@ import "swiper/scss/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade } from "swiper";
 import { fetchData } from "../../redux/slice/getDataSlice";
-import { Link, useNavigate } from "react-router-dom";
-import { addProduct, increment, incrementPrice } from "../../redux/slice/cardSlice";
+import { Link } from "react-router-dom";
+import {
+  addProduct,
+  increment,
+  incrementPrice,
+} from "../../redux/slice/cardSlice";
 const CardTrendingItems = () => {
   const [btnStatus, setBtnStatus] = useState(true);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
+  const cards = useSelector((state) => state.cards);
+  let array;
   useEffect(() => {
     dispatch(fetchData());
   }, []);
-  const navigate = useNavigate();
   const handeAddCard = (product) => {
-    dispatch(addProduct(product));
+    array = JSON.parse(localStorage.getItem("Products")) || [];
+    if (array.find((elem) => elem.id == product.id)) {
+      let obj = array.find((elem) => elem.id == product.id);
+      obj.quantity = obj.quantity + 1;
+      obj.total = +obj.total + +product.price;
+    } else {
+      array.push(product);
+    }
+    localStorage.setItem("Products", JSON.stringify(array));
   };
 
   return (
@@ -69,7 +82,6 @@ const CardTrendingItems = () => {
                         <button
                           onClick={() => {
                             handeAddCard(element);
-                            navigate("/cards");
                             dispatch(increment());
                             dispatch(incrementPrice(element.price));
                           }}

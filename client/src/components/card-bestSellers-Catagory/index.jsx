@@ -7,7 +7,7 @@ import "swiper/scss/pagination";
 import { Navigation, EffectFade } from "swiper";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../redux/slice/getDataSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   addProduct,
   increment,
@@ -46,11 +46,19 @@ const CardBestSellersCatagory = () => {
     showDogMed &&
       (setShowKibbles(true), setShowDogMed(false), setShowCatFood(false));
   };
+  let array;
 
   // basket
-  const navigate = useNavigate();
   const handeAddCard = (product) => {
-    dispatch(addProduct(product));
+    array = JSON.parse(localStorage.getItem("Products")) || [];
+    if (array.find((elem) => elem.id == product.id)) {
+      let obj = array.find((elem) => elem.id == product.id);
+      obj.quantity = obj.quantity + 1;
+      obj.total = +obj.total + +product.price;
+    } else {
+      array.push(product);
+    }
+    localStorage.setItem("Products", JSON.stringify(array));
   };
   return (
     <div id="best-and-category">
@@ -177,7 +185,6 @@ const CardBestSellersCatagory = () => {
                                   <button
                                     onClick={() => {
                                       handeAddCard(element);
-                                      navigate("/cards");
                                       dispatch(increment());
                                       dispatch(incrementPrice(element.price));
                                     }}
@@ -241,7 +248,6 @@ const CardBestSellersCatagory = () => {
                                 <button
                                   onClick={() => {
                                     handeAddCard(element);
-                                    navigate("/cards");
                                     dispatch(increment());
                                     dispatch(incrementPrice(element.price));
                                   }}
@@ -304,7 +310,6 @@ const CardBestSellersCatagory = () => {
                                 <button
                                   onClick={() => {
                                     handeAddCard(element);
-                                    navigate("/cards");
                                     dispatch(increment());
                                     dispatch(incrementPrice(element.price));
                                   }}

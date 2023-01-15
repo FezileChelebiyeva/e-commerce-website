@@ -17,7 +17,6 @@ const CardsPage = () => {
 
   const navigate = useNavigate();
 
-  let quantity = 1;
   return (
     <div id="added-product">
       <div className="container">
@@ -34,7 +33,7 @@ const CardsPage = () => {
               </tr>
             </thead>
             <tbody>
-              {product.product.map((element) => {
+              {JSON.parse(localStorage.getItem("Products"))?.map((element) => {
                 return (
                   <tr key={element.id}>
                     <td>
@@ -42,12 +41,18 @@ const CardsPage = () => {
                     </td>
                     <td>{element.name}</td>
                     <td>{element.price}</td>
-                    <td>{quantity}</td>
-                    <td>{element.price}</td>
+                    <td>{element.quantity}</td>
+                    <td>{element.total}</td>
                     <td>
                       <div
                         onClick={() => {
-                          dispatch(removeProduct(element.id));
+                          let array = JSON.parse(
+                            localStorage.getItem("Products")
+                          )?.filter((elem) => elem.id !== element.id);
+                          localStorage.setItem(
+                            "Products",
+                            JSON.stringify(array)
+                          );
                           dispatch(decremennt());
                           dispatch(decrementPrice(element.price));
                         }}
@@ -64,7 +69,7 @@ const CardsPage = () => {
           <div className="btns">
             <button onClick={() => navigate("/")}>CONTINUE SHOPPING</button>
             <button
-              onClick={() => dispatch(removeAllProduct())}
+              onClick={() => dispatch(removeAllProduct("Products"))}
               className="clear"
             >
               CLEAR CART

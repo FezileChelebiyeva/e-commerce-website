@@ -7,8 +7,13 @@ import "swiper/scss/pagination";
 import { Navigation, EffectFade } from "swiper";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../redux/slice/getDataSlice";
-import { Link, useNavigate } from "react-router-dom";
-import { addProduct, decrementPrice, increment, incrementPrice } from "../../redux/slice/cardSlice";
+import { Link } from "react-router-dom";
+import {
+  addProduct,
+  decrementPrice,
+  increment,
+  incrementPrice,
+} from "../../redux/slice/cardSlice";
 const CardUsersInterested = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
@@ -16,9 +21,18 @@ const CardUsersInterested = () => {
   useEffect(() => {
     dispatch(fetchData());
   }, []);
-  const navigate = useNavigate();
+  let array;
+
   const handeAddCard = (product) => {
-    dispatch(addProduct(product));
+    array = JSON.parse(localStorage.getItem("Products")) || [];
+    if (array.find((elem) => elem.id == product.id)) {
+      let obj = array.find((elem) => elem.id == product.id);
+      obj.quantity = obj.quantity + 1;
+      obj.total = +obj.total + +product.price;
+    } else {
+      array.push(product);
+    }
+    localStorage.setItem("Products", JSON.stringify(array));
   };
   return (
     <div id="users-interested">
@@ -69,14 +83,8 @@ const CardUsersInterested = () => {
                         </div>
                         <div className="btn">
                           <button
-                            // disabled={
-                            //   card.product.find((el) => el.id === element.id)
-                            //     ? true
-                            //     : false
-                            // }
                             onClick={() => {
                               handeAddCard(element);
-                              navigate("/cards");
                               dispatch(increment());
                               dispatch(incrementPrice(element.price));
                             }}
