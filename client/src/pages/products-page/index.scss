@@ -1,0 +1,101 @@
+#collection-all {
+  padding: 50px 0;
+  header {
+    width: 100%;
+    background-color: #e9ecef;
+    padding: 15px 0;
+    .home {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      &:hover {
+        color: #56a700;
+      }
+    }
+    .product {
+      font-size: 14px;
+      word-spacing: 5px;
+      margin-left: 10px;
+      font-weight: 500;
+      color: #56a700;
+    }
+  }
+  .products {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    .card-product {
+      width: 25%;
+      height: 100%;
+      padding: 20px 20px 20px 30px;
+      border: 1px solid #ececec;
+      cursor: pointer;
+      .img {
+        img {
+          width: 210px;
+        }
+      }
+      .info {
+        a {
+          text-decoration: none;
+          color: #1a1f2b;
+          font-size: 15px;
+          font-weight: 600;
+          transition: 0.4s;
+          &:hover {
+            color: #56a700;
+          }
+        }
+        .price-product {
+          padding-top: 20px;
+          .price {
+            color: rgb(158, 157, 157);
+            text-decoration: line-through;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 10px;
+          }
+          .discountPrice {
+            font-weight: 700;
+            font-size: 14px;
+            color: #c61132;
+          }
+        }
+        .title {
+          color: #555;
+          font-size: 14px;
+          width: 100%;
+          padding: 20px 0;
+        }
+      }
+      .btn {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        button {
+          background: transparent;
+          border: 2px solid #ececec;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          width: 150px;
+          font-size: 14px;
+          border-radius: 500px;
+          font-weight: 400;
+          text-align: center;
+          transition: all 0.4s;
+          outline: 0;
+          cursor: pointer;
+          &:hover {
+            background-color: #56a700;
+            color: #fff;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
