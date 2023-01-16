@@ -36,7 +36,7 @@ const CardDealsOfWeek = () => {
                     <img src={element.image} alt="" />
                   </div>
                   <div className="info">
-                    <Link>{element.name}</Link>
+                    <Link to={`/${element.name}`}>{element.name}</Link>
                     <p className="price-product">
                       <span
                         className={

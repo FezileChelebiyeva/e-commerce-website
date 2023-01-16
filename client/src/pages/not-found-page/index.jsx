@@ -5,6 +5,11 @@ const NotFound = () => {
   const navigate = useNavigate();
   return (
     <div id="not-found">
+       <Helmet>
+        <title>404 Not Found - Tammy demo</title>
+        <meta name="description" content="test on react-helmet" />
+        <meta name="theme-color" content="#ccc" />
+      </Helmet>
       <header>
         <div className="container">
           <span onClick={() => navigate("/")} className="home">

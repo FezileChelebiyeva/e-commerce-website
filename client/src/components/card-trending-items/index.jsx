@@ -58,7 +58,9 @@ const CardTrendingItems = () => {
                     className="card-trending"
                   >
                     <div className="img">
-                      <img src={element.image} alt="" />
+                      <Link to={`/${element.name}`}>
+                        <img src={element.image} alt="" />
+                      </Link>
                     </div>
                     {btnStatus ? (
                       <div className="info">

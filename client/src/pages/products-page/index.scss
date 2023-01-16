@@ -20,6 +20,34 @@
       color: #56a700;
     }
   }
+  .sort {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    color: #555;
+    cursor: pointer;
+    .btn {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 100%;
+        display: block;
+        text-align: center;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 15px;
+        &:hover {
+          background-color: rgb(172, 172, 172);
+        }
+      }
+    }
+  }
   .products {
     margin: 50px 0;
     display: flex;

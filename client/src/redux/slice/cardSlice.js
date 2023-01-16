@@ -16,7 +16,6 @@ export const addCard = createSlice({
       state.product = JSON.parse(localStorage.getItem("Products"))?.filter(
         (elem) => elem.id !== action.payload?.id
       );
-      console.log(state.product);
     },
     removeAllProduct: (state, action) => {
       localStorage.removeItem(action.payload);

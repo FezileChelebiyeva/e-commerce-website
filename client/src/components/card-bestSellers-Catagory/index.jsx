@@ -86,7 +86,7 @@ const CardBestSellersCatagory = () => {
                         <img src={element.image} alt="" />
                       </div>
                       <div className="info">
-                        <Link>{element.name}</Link>
+                        <Link to={`/${element.name}`}>{element.name}</Link>
                         <p className="price-product">
                           <span
                             className={
@@ -160,7 +160,9 @@ const CardBestSellersCatagory = () => {
                             className="card-category"
                           >
                             <div className="img">
-                              <img src={element.image} alt="" />
+                              <Link to={`/${element.name}`}>
+                                <img src={element.image} alt="" />
+                              </Link>
                               {btnStatus ? (
                                 <div className="info">
                                   <Link>{element.name}</Link>
@@ -222,7 +224,9 @@ const CardBestSellersCatagory = () => {
                             className="card-category"
                           >
                             <div className="img">
-                              <img src={element.image} alt="" />
+                              <Link to={`/${element.name}`}>
+                                <img src={element.image} alt="" />
+                              </Link>
                             </div>
                             {btnStatus ? (
                               <div className="info">
@@ -284,7 +288,9 @@ const CardBestSellersCatagory = () => {
                             className="card-category"
                           >
                             <div className="img">
-                              <img src={element.image} alt="" />
+                              <Link to={`/${element.name}`}>
+                                <img src={element.image} alt="" />
+                              </Link>
                             </div>
                             {btnStatus ? (
                               <div className="info">

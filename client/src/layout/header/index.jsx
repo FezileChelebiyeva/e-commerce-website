@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const [head, setHead] = useState(true);
+  const [input, setInput] = useState("");
   const [showShop, setShowShop] = useState(false);
   const [showPages, setShowPages] = useState(false);
   const [header, setHeader] = useState(true);
@@ -44,6 +46,7 @@ const Header = () => {
   window.addEventListener("scroll", handleHeader);
 
   const handleSearch = (e) => {
+    setInput(e.target.value);
     e.target.value ? setSearch(true) : setSearch(false);
     setFiltredProducts(
       products.data.allProducts.filter((elem) =>
@@ -98,6 +101,7 @@ const Header = () => {
                   <form action="">
                     <div className="search-input">
                       <input
+                        value={input}
                         onChange={(e) => handleSearch(e)}
                         type="text"
                         placeholder="Search our store"
@@ -113,7 +117,15 @@ const Header = () => {
                                       <img src={element.image} alt="" />
                                     </div>
                                     <div className="name">
-                                      <Link>{element.name}</Link>
+                                      <Link
+                                        onClick={() => {
+                                          setInput("");
+                                          setSearch(false);
+                                        }}
+                                        to={`/${element.name}`}
+                                      >
+                                        {element.name}
+                                      </Link>
                                     </div>
                                   </li>
                                 );
@@ -139,7 +151,7 @@ const Header = () => {
                       <span className="d-block">Your cart</span>
                       <span className="amount">
                         <span className="shopping-cart__total">
-                          <span className="money">${price}</span>
+                          <span className="money">${price}.00</span>
                         </span>
                       </span>
                     </div>
@@ -148,7 +160,7 @@ const Header = () => {
                     <ul>
                       {card && (
                         <div className="card">
-                          <h3>Your cart is currently empty.</h3>
+                          {/* {head && <h3>Your cart is currently empty.</h3>} */}
                           {JSON.parse(localStorage.getItem("Products"))?.map(
                             (element) => {
                               return (
@@ -172,7 +184,7 @@ const Header = () => {
                           )}
                           <div className="total">
                             <div>Total</div>
-                            <div>${price}</div>
+                            <div>${price}.00</div>
                           </div>
                           <div className="btn">
                             <button
